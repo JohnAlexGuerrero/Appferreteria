@@ -27,11 +27,12 @@
   }
 
 #contenedor{
+        position: initial 210px;
         width: 1500px;
         height: 100%;
         background: yellow;
         height: 100%;
-        left: -200px;
+        left: 200px;
 }
 
 #contenedor.container-panel{
