@@ -77,7 +77,7 @@ WSGI_APPLICATION = 'ferreteria.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2', #'django.db.backends.sqlite3',
-        'NAME': 'ferreteria', #os.path.join(BASE_DIR, 'db.sqlite3'),
+        'NAME': 'ferreteria2', #os.path.join(BASE_DIR, 'db.sqlite3'),
         'USER': 'postgres',
         'PASSWORD': 'postgrest',
         'PORT':5433
