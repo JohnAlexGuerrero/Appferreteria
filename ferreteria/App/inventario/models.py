@@ -18,4 +18,3 @@ class Producto(models.Model):
     precio_venta_1 = models.DecimalField(max_digits=10,decimal_places=2,default=0)
     precio_venta_2 = models.DecimalField(max_digits=10,decimal_places=2,default=0)
     precio_venta_3 = models.DecimalField(max_digits=10,decimal_places=2,default=0)
-    

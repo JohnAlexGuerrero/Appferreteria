@@ -19,7 +19,7 @@ from django.urls import path, include
 from App.inventario.views import Hola, fecha_actual
 
 urlpatterns = [
-    url(r'^hola/$',Hola),
-    url(r'^fecha/$',fecha_actual),
+    #url(r'^hola/$',Hola),
+    #url(r'^fecha/$',fecha_actual),
     path('admin/', admin.site.urls),
 ]

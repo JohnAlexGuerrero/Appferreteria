@@ -3,7 +3,16 @@ from App.inventario.models import Producto
 from App.inventario.models import Impuesto
 from App.inventario.models import Unidad
 
+
+class productAdmin(admin.ModelAdmin):
+    list_display=('codigo','descripcion','precio_costo','precio_venta_1','precio_venta_2','precio_venta_3')
+    #search_fields=('descripcion')
+    
+
+class impuestoAdmin(admin.ModelAdmin):
+    list_display=('nomImpuesto')
+
 # Register your models here.
-admin.site.register(Producto)
+admin.site.register(Producto,productAdmin)
 admin.site.register(Impuesto)
 admin.site.register(Unidad)
