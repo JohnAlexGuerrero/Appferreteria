@@ -5,6 +5,9 @@ from App.inventario.models import Producto
 class typePago(models.Model):
     idtp = models.IntegerField(default=20)
     nomtypepago = models.CharField(max_length=20)
+    
+    def __str__(self):
+        return self.nomtypepago
 
 
 class Cliente(models.Model):
@@ -13,11 +16,17 @@ class Cliente(models.Model):
     ID = models.IntegerField(blank=True)
     direccion =models.CharField(max_length=50,blank=True)
     telefono = models.CharField(max_length=50,blank=True)
+    
+    def __str__(self):
+        return self.nombres
 
 class pedidoCliente(models.Model):
     product = models.ForeignKey(Producto, null=True,blank=True, on_delete=models.CASCADE)
     cantidad = models.IntegerField(default=0)
     precio = models.DecimalField(max_digits=10,decimal_places=2)
+
+    def __str__(self):
+        return self.product
 
 class facturaClient(models.Model):
     factura = models.IntegerField()

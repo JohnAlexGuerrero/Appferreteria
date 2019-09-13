@@ -9,10 +9,10 @@ class productAdmin(admin.ModelAdmin):
     search_fields=(list_display)
     
 class impuestoAdmin(admin.ModelAdmin):
-    list_display=('nomImpuesto')
+    list_display=('id','nomImpuesto','valor')
         
 
 # Register your models here.
 admin.site.register(Producto,productAdmin)
-admin.site.register(Impuesto)
+admin.site.register(Impuesto,impuestoAdmin)
 admin.site.register(Unidad)
