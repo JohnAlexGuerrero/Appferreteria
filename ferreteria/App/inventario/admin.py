@@ -6,11 +6,11 @@ from App.inventario.models import Unidad
 
 class productAdmin(admin.ModelAdmin):
     list_display=('codigo','descripcion','precio_costo','precio_venta_1','precio_venta_2','precio_venta_3')
-    #search_fields=('descripcion')
+    search_fields=(list_display)
     
-
 class impuestoAdmin(admin.ModelAdmin):
     list_display=('nomImpuesto')
+        
 
 # Register your models here.
 admin.site.register(Producto,productAdmin)
