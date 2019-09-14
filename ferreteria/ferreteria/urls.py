@@ -16,10 +16,10 @@ Including another URLconf
 from django.contrib import admin
 from django.conf.urls import url
 from django.urls import path, include
-from App.inventario.views import Hola, fecha_actual
+from App.inventario import views
 
 urlpatterns = [
-    #url(r'^hola/$',Hola),
-    #url(r'^fecha/$',fecha_actual),
+    url(r'^formulario-buscar/$',views.formulario_buscar),
+    url(r'^buscar/$',views.buscar),
     path('admin/', admin.site.urls),
 ]

@@ -1,0 +1,17 @@
+<p>Estas buscando: <strong>{{query}}</strong></p>
+
+{% if producto %}
+    <p>Productos encontrados: {{producto|length }} producto{{ producto|pluralize }}</p>
+    <table border="0">
+        <tr>
+            <th>Descricion</th>
+        </tr>
+    </table>
+    <ul>
+        {% for p in producto %}
+            <li>{{ p.descripcion }}  {{p.precio_venta_1}}</li>
+        {% endfor %}
+    </ul>
+{% else %}
+    <p>ningn producto coincide con el criterio de búsqueda</p>
+{% endif %}
